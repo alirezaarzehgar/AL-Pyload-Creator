@@ -2,7 +2,13 @@
 
 ## Document
         I am alireza arzehgar.
-        AL-Pyload-Creator can create pyload for linux and getting access from another systems and remot Linux desktop:).
+        AL-Pyload-Creator can create pyload and malware :
+	- pyload for linux
+	- pyload for server
+	- php shell
+	- virus for linux
+
+	getting access from another systems and remot Linux desktop:).
 
 ## using
 	$ ./AL-Pyload-Creator [OPTIONS]
