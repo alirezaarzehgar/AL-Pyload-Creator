@@ -5,5 +5,5 @@ ARG = -g -Wall
 
 all:
 	$(CC) $(ARG) -o $(INP) $(OUT)
-#	@clear
-#	@./AL-Pyload-Creator -h
+	@clear
+	@./AL-Pyload-Creator -h
