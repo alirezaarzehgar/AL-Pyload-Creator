@@ -43,7 +43,7 @@ int main(int argc, char** argv)
                                         "        -i --ip          : set ip for target program\n"
                                         "        -p --port        : set port for create a socket\n"
                                         "        -n --name        : choose name program target\n"
-					"	 -f --fileaddress : choose a deface file from sh methode"
+					"	 -f --fileaddress : choose a deface file from sh methode\n"
                                         "\033[31mEXAMPLE\033[0m\n"
                                         "        ./AL-Pyload-Creator -o Linux -m tc -n tor-configure -p 9090 -i 198.169.0.12\n"
                                         "\033[31mGITHUB\033[0m\n"
