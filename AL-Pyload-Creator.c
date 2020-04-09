@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 		if(strstr(argv[i], "-name") || strstr(argv[i], "name") || strstr(argv[i], "--name") || strstr(argv[i], "-n")) sprintf(Tname, argv[i+1]);
 		if(strstr(argv[i], "-ip") || strstr(argv[i], "ip") || strstr(argv[i], "--ip") || strstr(argv[i], "-i")) sprintf(Tip, argv[i+1]);
 
-		if(strstr(argv[i], "-fileaddress") || strstr(argv[i], "fileaddress") || strstr(argv[i], "--fileaddress") || strstr(argv[i], "-fd") || strstr(argv[i], "-FD")) sprintf(Faddr, argv[i+1]);
+		if(strstr(argv[i], "-fileaddress") || strstr(argv[i], "fileaddress") || strstr(argv[i], "--fileaddress") || strstr(argv[i], "-fd") || strstr(argv[i], "-FD") || strstr(argv[i], "-f")) sprintf(Faddr, argv[i+1]);
 
                 if(strstr(argv[i], "-help") || strstr(argv[i], "help") || strstr(argv[i], "--hel[") || strstr(argv[i], "-h"))
                 {
@@ -37,12 +37,13 @@ int main(int argc, char** argv)
                                         "        AL-Pyload-Creator [\033[31mARGUMENT\033[0m]\n"
                                         "\n"
                                         "\033[31mOPTIONS\033[0m\n"
-                                        "        -h --help  : help\n"
-                                        "        -m --mode  : choose model (tc : target Create/ga : getting access)\n"
-                                        "        -o --os    : choose Oprating system for create pyload\n"
-                                        "        -i --ip    : set ip for target program\n"
-                                        "        -p --port  : set port for create a socket\n"
-                                        "        -n --name  : choose name program target\n"
+                                        "        -h --help       : help\n"
+                                        "        -m --mode       : choose model (tc : target Create/ga : getting access/sh : php shell)\n"
+                                        "        -o --os          : choose Oprating system for create pyload\n"
+                                        "        -i --ip          : set ip for target program\n"
+                                        "        -p --port        : set port for create a socket\n"
+                                        "        -n --name        : choose name program target\n"
+					"	 -f --fileaddress : choose a deface file from sh methode"
                                         "\033[31mEXAMPLE\033[0m\n"
                                         "        ./AL-Pyload-Creator -o Linux -m tc -n tor-configure -p 9090 -i 198.169.0.12\n"
                                         "\033[31mGITHUB\033[0m\n"

@@ -19,14 +19,20 @@
 ## getting access
 	$ ./AL-Pyload-Creator -m ga
 
+## create php shell
+	$ ./AL-Pyload-Creator -m sh
+
 ## options
 	-o --os   : this parametr can setting oprating system of target program (but not write for another os and defualt os is Linux)
-	-i --ip   : this parametr can setting ip for connection target with you. you can Enter your ip
-	-p --port : this parametr cat setting port for two program for create a socket.
-	-n --name : this parametr cat setting target program name
-	-m --mode : this parametr can choose model of program work, if you write [--mode tc/targetCreate] program create a target program
-		    and if you write [--mode ga/gettingAccess] program getting access from target program
-		   
+	-i --ip   	: this parametr can setting ip for connection target with you. you can Enter your ip
+	-p --port 	: this parametr cat setting port for two program for create a socket.
+	-n --name 	: this parametr cat setting target program name
+	-m --mode 	: this parametr can choose model of program work,
+		    		if you write [--mode tc/targetCreate] program create a target program
+		    		and if you write [--mode ga/gettingAccess] program getting access from target program
+ 		    		and if you write [--mode sh/shell] program create a php shell for defacing add page
+	-f --fileaddr	: this parametr cat choose a deface file for -m sh method actually you can customizeing php shell
+ 
 ## github link
         - link : https://github.com/alirezaarzehgar/AL-Pyload-Creator.git
 
